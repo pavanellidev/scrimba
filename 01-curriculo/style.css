@@ -1,0 +1,30 @@
+body {
+  font-family: 'Roboto';
+}
+
+.main {
+  width: 800px;
+  background-color: #e0fff3;
+  padding: 20px;
+}
+
+
+.info1 {
+  margin-top: 0;
+  line-height: 1.2;
+  font-size: 19px;
+}
+
+p {
+  font-size: 19px;
+  color: #222;
+  margin: 0;
+}
+
+h1 {
+  color: #3d7b80;
+}
+
+h2 {
+  color: #689993;
+}
