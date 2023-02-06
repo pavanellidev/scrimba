@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+h1, p {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35rem;
+  height: 35rem;
+  margin: 0 auto;
+  background-color: #1f2937;
+}
+
+.title {
+  font-family: 'Karla', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+}
+
+.title .green {
+  color: #4adf86;
+}
+
+.description {
+  color: #d5d4d8;
+  font-size: 1.25rem;
+  margin-top: 10px;
+}
+
+.btn {
+  width: 11.875rem;
+  padding: 9px 15px;
+  border-radius: 4px;
+  border: none;
+  background-color: #10b981;
+  margin-top: 3.125rem;
+  color: white;
+  font-size: 1rem;
+}
+
+.detail {
+  width: 27.875rem;
+  height: 1px;
+  background-color: #2f3e53;
+  margin-top: 2.187rem;
+}
+
+.result {
+  width: 13.125rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  background-color: #273549;
+  display: inline-block;
+  margin-top: 2.187rem;
+  margin-right: 1.25rem;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.pass1, .pass2 {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+  color: #55F991;
+}
