@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+header {
+  max-width: 23.437rem;
+  display: flex;
+  justify-content: space-between;
+  height: 67px;
+  margin: 0 auto;
+  border-bottom: 1px solid #c6c6c6;
+  margin-bottom: -1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.user-header {
+  max-width: 23.437rem;
+  display: flex;
+  margin: 0 auto;
+  padding: 10px 0;
+  padding-left: 15px;
+}
+
+.user-avatar {
+  width: 2.125rem;
+  height: 2.125rem;
+  border-radius: 50%;
+  align-self: center;
+}
+
+h3 {
+  font-size: 0.8125rem;
+  font-weight: bold;
+}
+
+.user-header-txt {
+  padding-left: 10px;
+}
+
+.user-header-p {
+  font-size: 0.75rem;
+}
+
+.post {
+  width: 23.437rem;
+  height: 23.437rem;
+  margin: 0 auto;
+}
+
+.post img {
+  max-width: 100%;
+}
+
+.icons {
+  max-width: 23.437rem;
+  margin: 0 auto;
+  display: flex;
+  gap: 15px;
+  padding: 15px 0;
+  padding-left: 15px;
+}
+
+.icons img {
+  width: 1.81rem;
+}
+
+.likes {
+  max-width: 23.437rem;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-bottom: 10px;
+}
+
+.likes p {
+  font-size: 0.8125rem;
+  font-weight: bold;
+}
+
+.post-text {
+  max-width: 23.437rem;
+  font-size: 0.8125rem;
+  margin: 0 auto;
+  padding-left: 15px;
+}
+
+.username {
+  font-weight: bold;
+}
+
+#like-btn:hover {
+  background-color: rgb(255, 51, 51);
+  border-radius: 10%;
+  cursor: pointer;
+}
+
+#comment-btn:hover {
+  background-color: #c6c6c6;
+  border-radius: 10%;
+  cursor: pointer;
+}
+
+#dm-btn:hover {
+  background-color: #c6c6c6;
+  border-radius: 10%;
+  cursor: pointer;
+}
