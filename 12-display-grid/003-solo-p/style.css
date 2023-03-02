@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+/* Header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding-top: 1.8rem;
+  padding-bottom: 1.8rem;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo img {
+  width: 50px;
+}
+
+.header-title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 1.7rem;
+  margin-left: 10px;
+}
+
+.nav {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.nav li a {
+  margin-left: 30px;
+  text-decoration: none;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 15px 0px;
+  color: #090909;
+  display: inline-block;
+  position: relative;
+}
+
+.nav li a::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 3px;
+  margin-top: 2px;
+  background-color: #090909;
+  position: absolute;
+  transition: 0.4s;
+}
+
+.nav li a:hover::after {
+  width: 100%;
+}
+
+/* main section */
+
+.img-bg-section {
+  max-width: 1085px;
+  height: 488px;
+  margin: 0 auto;
+  background: url('img/blog-image-hero.jpg') no-repeat;
+  background-size: cover;
+  display: flex;
+}
+
+.img-bg-section-content {
+  color: whitesmoke;
+  align-self: end;
+  padding-left: 3.7rem;
+  padding-bottom: 3.125rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.img-bg-section-content span {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.img-bg-section-content h1 {
+  font-size: 2.5rem;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.img-bg-section-content p {
+  max-width: 94ch;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Posts */
+
+.posts {
+  padding-top: 50px;
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  align-items: center;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+}
+
+.post img {
+  width: 100%;
+}
+
+.post span,
+.post h2,
+.post p {
+  font-family: 'Source Sans Pro', sans-serif; 
+}
+
+.post span {
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+.post h2 {
+  padding-bottom: 10px;
+}
+
+@media (max-width: 979px) {
+  .posts {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
