@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  font-family: 'Oxygen', sans-serif;
+}
+
+.container {
+  max-width: 390px;
+  margin: 0 auto;
+  margin-top: 20px;
+  background: linear-gradient(to top, #2c3e50, #bdc3c7);
+  border-radius: 6px;
+  box-shadow: 1px 1px 5px #797979;
+}
+
+.container-happy {
+  max-width: 390px;
+  margin: 0 auto;
+  margin-top: 20px;
+  background: linear-gradient(to right, #74ebd5, #acb6e5);
+  border-radius: 6px;
+  box-shadow: 1px 1px 5px #797979;
+}
+
+.container h1 {
+  padding-top: 20px;
+  margin-bottom: 60px;
+}
+
+.container p {
+  margin-bottom: 60px;
+  font-size: 1.5rem;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.container button {
+  padding: 10px 15px;
+  margin-bottom: 22px;
+  background-color: gray;
+  cursor: pointer;
+  border: 2px solid black;
+  border-radius: 5px;
+  color: whitesmoke;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.container button:hover {
+  border: 2px solid whitesmoke;
+}
+
+.container .button-happy {
+  padding: 10px 15px;
+  margin-bottom: 22px;
+  background-color: #14b4aa;
+  cursor: pointer;
+  border: 2px solid #14b4aa;
+  border-radius: 5px;
+  color: whitesmoke;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.container .button-happy:hover {
+  border: 2px solid #858fbd;
+}

@@ -1,0 +1,20 @@
+body {
+  max-width: 1100px;
+  margin: 0 auto;
+  font-family: Helvetica;
+}
+
+p {
+  max-width: 90ch;
+}
+
+.dark {
+  background-color: #272727;
+  color: whitesmoke;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
