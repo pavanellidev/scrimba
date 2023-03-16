@@ -1,10 +1,17 @@
 let deckId
+let computerScore = 0
+let yourScore = 0
+const remaining = document.getElementById("remaining-cards")
+const computerScoreEl = document.getElementById("computer-score")
+const yourScoreEl = document.getElementById("your-score")
+const winnerText = document.querySelector('h2')
 
 function handleClick() {
     fetch("https://apis.scrimba.com/deckofcards/api/deck/new/shuffle/")
         .then(res => res.json())
         .then(data => {
             console.log(data)
+            remaining.innerText = `Remaining cards: ${data.remaining}`
             deckId = data.deck_id
         })
 }
@@ -17,7 +24,7 @@ document.getElementById("draw-cards").addEventListener("click", () => {
         .then(data => {
             const cardSlotOne = document.getElementById("card-slot1")
             const cardSlotTwo = document.getElementById("card-slot2")
-         
+            
             cardSlotOne.style.border = 'none'
             cardSlotTwo.style.border = 'none'
 
@@ -36,15 +43,27 @@ document.getElementById("draw-cards").addEventListener("click", () => {
                 const card2ValueIndex = valueOptions.indexOf(card2.value)
 
                 if(card1ValueIndex > card2ValueIndex) {
+                    computerScore++
+                    computerScoreEl.innerText = `Computer Score: ${computerScore}`
                     return 'Computer wins!'
                 } else if (card2ValueIndex > card1ValueIndex) {
+                    yourScore++
+                    yourScoreEl.innerText = `Your Score: ${yourScore}`
                     return 'You win!'
                 } else {
                     return "It's a tie!"
                 }
+
             }
 
-            document.querySelector('h2').innerText = determineWinner(data.cards[0], data.cards[1])
+            winnerText.innerText = determineWinner(data.cards[0], data.cards[1])
 
+            remaining.innerText = `Remaining cards: ${data.remaining}`
+
+            if(data.remaining === 0) {
+                document.querySelector('#draw-cards').style.cursor = 'none'
+                document.querySelector('button:hover').style.backgroundColor = '#ecbb3d'
+                document.querySelector('button:hover').style.color = '#ecbb3d'
+            } 
     })
 })

@@ -4,15 +4,25 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cards War</title>
+  <title>Card Battle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <div class="container">
-    <div class="match-info"></div>
+    <div class="match-info">
+      <div class="title"><h1>Card Battle</h1></div>
+      <div class="match-content">
+        <div id="remaining-cards"></div>
+        <div id="computer-score">Computer Score: </div>
+        <div id="your-score">Your Score: </div>
+      </div>
+    </div>
     <button id="new-deck">Shuffle Deck</button>
-    <h2 class="subtitulo"></h2>
+    <h2 class="subtitle"></h2>
     <div id="cards">
       <div id="card-slot1"></div>
       <div id="card-slot2"></div>

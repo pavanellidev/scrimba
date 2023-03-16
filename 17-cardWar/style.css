@@ -20,9 +20,38 @@ body {
   box-shadow: 1px 2px 6px #525252;
 }
 
+.match-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  height: fit-content;
+  border-bottom: 2px solid #c5c5c5;
+}
+
+.title {
+  font-family: 'Arvo', serif;
+  color: #882c4b;
+  font-size: 1.6rem;
+  letter-spacing: 3px;
+  text-shadow: -1px -1px 0px #e48aa8,
+  1px 1px 0px #e48aa8;
+}
+
+.match-content {
+  display: flex;
+  margin-top: 10px;
+  font-family: Helvetica, sans-serif;
+  color: #eeeeee;
+  font-size: 1.2rem;
+  gap: 20px;
+}
+
 button {
   margin: 10px;
-  width: 12.5rem;
+  width: 14.5rem;
   padding: 15px 20px;
   border: 2px solid #ca9e2f;
   border-radius: 5px;
@@ -44,17 +73,19 @@ button:hover {
 }
 
 #new-deck {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 #draw-cards {
-  margin-bottom: 20px;
+  margin-top: 18px;
+  margin-bottom: 30px;
 }
 
-.subtitulo {
+.subtitle {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0 auto;
-  padding: 10px;
+  padding-top: 8px;
+  padding-bottom: 12px;
   color: #1c491c;
 }
 
@@ -77,17 +108,13 @@ button:hover {
   width: 160px;
   height: 224px;
 }
-
-.match-info {
-  width: 100%;
-  height: fit-content;
-  border-bottom: 2px solid #c5c5c5;
-  border-radius: 0px 0px 0px 4px;
-}
  
 @media (max-width: 700px) {
   .container {
     height: fit-content;
+  }
+  .title {
+    font-size: 1.2rem;
   }
   button {
     width: 8.6rem;
