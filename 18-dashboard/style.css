@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 1px 1px 8px #cccccc;
+}
+
+main {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+
+h1,
+p {
+  width: fit-content;
+  background: rgba(0, 0, 0, .1);
+  padding: 4px;
+}
+
+h1 {
+  align-self: center;
+}
