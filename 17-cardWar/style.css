@@ -15,7 +15,7 @@ body {
   max-width: 65vw;
   height: fit-content;
   background: linear-gradient(to top, #6cca6c, #3e9b45 60%);
-  margin: 30px auto;
+  margin: 10px auto;
   border-radius: 4px;
   box-shadow: 1px 2px 6px #525252;
 }
@@ -25,7 +25,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 15px;
   width: 100%;
   height: fit-content;
   border-bottom: 2px solid #c5c5c5;
@@ -42,7 +42,7 @@ body {
 
 .match-content {
   display: flex;
-  margin-top: 10px;
+  margin-top: 5px;
   font-family: Helvetica, sans-serif;
   color: #eeeeee;
   font-size: 1.2rem;
@@ -50,10 +50,24 @@ body {
 }
 
 #remaining-cards {
-  margin-top: 10px;
+  margin-top: 5px;
   font-family: Helvetica, sans-serif;
   color: #eeeeee;
   font-size: 1.2rem;
+}
+
+p {
+  padding-top: 5px;
+  font-size: 1.1rem;
+}
+
+#computer-score,
+#your-score {
+  display: none;
+}
+
+#instructions {
+  text-align: center;
 }
 
 button {
@@ -80,12 +94,12 @@ button:hover {
 }
 
 #new-deck {
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 #draw-cards {
-  margin-top: 18px;
-  margin-bottom: 30px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .subtitle {
@@ -132,6 +146,23 @@ button:hover {
   font-weight: bold;
   position: absolute;
 }
+
+.win {
+  color: yellow;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px black;
+}
+
+.loose {
+  color: #f0351c;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px black;
+}
+
+.draw {
+  color: blue;
+  text-shadow: 1px 1px 1px black;
+}
  
 @media (max-width:1000px) {
   .container {
@@ -142,7 +173,7 @@ button:hover {
 
 @media (max-width: 700px) {
   .container {
-    height: fit-content;
+    min-height: 94vh;
   }
   .title {
     font-size: 1.2rem;
@@ -161,6 +192,9 @@ button:hover {
   #your-score {
     font-size: 1rem;
   }
+  #instructions p{
+    font-size: 0.9rem;
+  }
 }
 
 @media (max-width: 496px) {
@@ -176,8 +210,10 @@ button:hover {
     padding: 0; 
     gap: 15px;
   }
-
   #remaining-cards {
     font-size: 1rem;
+  }
+  #instructions p{
+    font-size: 0.82rem;
   }
 }
