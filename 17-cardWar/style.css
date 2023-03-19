@@ -12,7 +12,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-width: 60vw;
+  max-width: 65vw;
   height: fit-content;
   background: linear-gradient(to top, #6cca6c, #3e9b45 60%);
   margin: 30px auto;
@@ -47,6 +47,13 @@ body {
   color: #eeeeee;
   font-size: 1.2rem;
   gap: 20px;
+}
+
+#remaining-cards {
+  margin-top: 10px;
+  font-family: Helvetica, sans-serif;
+  color: #eeeeee;
+  font-size: 1.2rem;
 }
 
 button {
@@ -109,6 +116,12 @@ button:hover {
   height: 224px;
 }
  
+@media (max-width:1000px) {
+  .container {
+    max-width: 80vw;
+  }
+}
+
 @media (max-width: 700px) {
   .container {
     height: fit-content;
@@ -125,5 +138,28 @@ button:hover {
   #card-slot2 {
     width: 100px;
     height: 140px;
+  }
+  #computer-score,
+  #your-score {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 496px) {
+  .title {
+    font-size: 1rem;
+  }
+  #computer-score,
+  #your-score {
+    font-size: .9rem;
+    text-align: center;
+  }
+  .match-content {
+    padding: 0; 
+    gap: 15px;
+  }
+
+  #remaining-cards {
+    font-size: 1rem;
   }
 }
