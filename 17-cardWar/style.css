@@ -64,7 +64,7 @@ button {
   border-radius: 5px;
   background-color: #ecbb3d;
   color: green;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Helvetica, sans-serif;
   font-size: 1.1rem;
   font-weight: bold;
   cursor: pointer;
@@ -89,7 +89,7 @@ button:hover {
 }
 
 .subtitle {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Helvetica, sans-serif;
   margin: 0 auto;
   padding-top: 8px;
   padding-bottom: 12px;
@@ -114,11 +114,29 @@ button:hover {
   border-radius: 8px;
   width: 160px;
   height: 224px;
+  position: relative;
+}
+
+.you {
+  top: 0px;
+  left: -25px;
+  font-size: 1rem;
+  font-weight: bold;
+  position: absolute;
+}
+
+.computer {
+  bottom: 0px;
+  right: -25px;
+  font-size: 1rem;
+  font-weight: bold;
+  position: absolute;
 }
  
 @media (max-width:1000px) {
   .container {
-    max-width: 80vw;
+    max-width: 90vw;
+    margin: 10px auto;
   }
 }
 
