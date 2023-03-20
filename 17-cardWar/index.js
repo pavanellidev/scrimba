@@ -8,6 +8,8 @@ const winnerText = document.querySelector('h2')
 let turns = 10 
 let turns2 = 10 
 
+document.getElementById("draw-cards").disabled = true
+
 function handleClick() {
     fetch("https://apis.scrimba.com/deckofcards/api/deck/new/shuffle/")
         .then(res => res.json())
@@ -17,6 +19,9 @@ function handleClick() {
             document.getElementById('computer-score').style.display = 'block'
             document.getElementById('your-score').style.display = 'block'
             document.getElementById('instructions').style.display = 'none'
+            document.getElementById("draw-cards").style.color = 'green'
+            document.getElementById("new-deck").style.color = '#ecbb3d'
+            document.getElementById("draw-cards").disabled = false
             deckId = data.deck_id
         })
         if(document.getElementById("new-deck").innerText === "RESTART GAME") {       
@@ -44,8 +49,8 @@ document.getElementById("draw-cards").addEventListener("click", () => {
                 <span class="computer">🙂</span>
                 <img src=${data.cards[1].image} />  
             `
-            
-            document.getElementById("new-deck").style.color = '#ecbb3d'
+
+            document.getElementById("new-deck").disabled = true
 
             function determineWinner(card1, card2) {
                 const valueOptions = ["2", "3", "4", "5", "6", "7", "8", "9", 
@@ -71,7 +76,7 @@ document.getElementById("draw-cards").addEventListener("click", () => {
             winnerText.innerText = determineWinner(data.cards[0], data.cards[1])
 
             remaining.innerText = `Remaining turns: ${turns = turns-1}`
-            document.querySelector('#draw-cards').innerText = `DRAW (${turns2 = turns2-1})`
+            document.querySelector('#draw-cards').innerText = `BATTLE (${turns2 = turns2-1})`
 
             if(data.remaining === 32) {
                 document.querySelector('#draw-cards').style.cursor = 'none'
@@ -80,6 +85,7 @@ document.getElementById("draw-cards").addEventListener("click", () => {
                 document.querySelector('#draw-cards').disabled = 'true'
                 document.getElementById("new-deck").innerText = 'RESTART GAME'
                 document.getElementById("new-deck").style.color = 'green'
+                document.getElementById("new-deck").disabled = false
                 if(computerScore > yourScore) {
                     winnerText.innerText = "Computer beats you!"
                     winnerText.classList.add('loose')

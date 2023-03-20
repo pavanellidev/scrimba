@@ -31,8 +31,9 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
       fetch(`https://apis.scrimba.com/openweathermap/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=metric`)
         .then(res => res.json())
         .then(data => {
-          console.log(data.weather[0].icon)
-          document.querySelector('.weather-icon').innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png">`
+          console.log(data)
+          document.querySelector('.weather-icon').innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png">
+          <div class="temp"><p class="temp-n">${Math.floor(data.main.temp)}c°</p><p class="temp-c">${data.name}</p></div>`
         })
         .catch(err => console.error(err))
     }) 
