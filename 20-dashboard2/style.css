@@ -34,13 +34,14 @@ main {
 .bottom {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  padding-bottom: 4px;
 }
 
 .author {
   align-self: flex-end;
-  padding-bottom: 13px;
-  margin-left: 15px;
+  margin-left: 12px;
+  text-align: left;
 }
 
 h1 {
@@ -52,6 +53,7 @@ h1 {
   padding: 0 10px;
   font-size: 3rem;
   font-weight: 500;
+  margin-bottom: 40px;
 }
 
 .weather-icon {
@@ -88,6 +90,17 @@ body a {
   font-weight: 500;
   padding-left: 7px;
   padding-right: 7px;
+} 
+
+.currency {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 12px;
+}
+
+.currency img {
+  width: 32px;
 }
 
 @media (min-width: 1250px) {
@@ -95,7 +108,7 @@ body a {
     font-size: 3.3rem;
   }
   p {
-    font-size: 1.1rem;
+    font-size: 1.38rem;
   }
 }
 
@@ -104,7 +117,8 @@ body a {
     font-size: 2.6rem;
   }
   p {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
+    max-width: 14ch;
   }
   .noticias3 {
     display: none;

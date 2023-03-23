@@ -9,15 +9,18 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
     document.querySelector('.author').textContent = `By: Claudio Testa`
   })
 
-  fetch("https://newsapi.org/v2/top-headlines?sources=google-news-br&apiKey=b681747092d84ca9be055c2463baf75c")
+  fetch("https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/eur/brl.json")
     .then(res => res.json())
     .then(data => {
-      const num1 = Math.floor(Math.random() * 3)
-      const num2 = Math.floor(Math.random() * 3) + 3
-      const num3 = Math.floor(Math.random() * 3) + 6
-      document.querySelector('.noticias').innerHTML = `${data.articles[num1].title} <a href="${data.articles[num1].url}" target="_blank">+</a>`
-      document.querySelector('.noticias2').innerHTML = `${data.articles[num2].title} <a href="${data.articles[num2].url}" target="_blank"">+</a>`
-      document.querySelector('.noticias3').innerHTML = `${data.articles[num3].title} <a href="${data.articles[num3].url}" target="_blank"">+</a>`
+      document.querySelector('#currency1').textContent = `Euro: R$ ${data.brl.toFixed(2)}`.replace('.', ',')
+      console.log(data)
+    })
+    .catch(err => console.log(err))
+
+    fetch("https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd/brl.json")
+    .then(res => res.json())
+    .then(data => {
+      document.querySelector('#currency2').textContent = `Dolar: R$ ${data.brl.toFixed(2)}`.replace('.', ',')
       console.log(data)
     })
     .catch(err => console.log(err))
@@ -32,7 +35,6 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
       fetch(`https://apis.scrimba.com/openweathermap/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=metric`)
         .then(res => res.json())
         .then(data => {
-          console.log(data)
           document.querySelector('.weather-icon').innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png">
           <div class="temp"><p class="temp-n">${Math.floor(data.main.temp)}c°</p><p class="temp-c">${data.name}</p></div>`
         })
